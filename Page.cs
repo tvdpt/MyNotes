@@ -6,7 +6,7 @@ public class Page
         Content = content;
     }
 
-    public virtual void Read()
+    public void Read()
     {
         Console.Clear();
         Console.WriteLine("\nPage contents:");

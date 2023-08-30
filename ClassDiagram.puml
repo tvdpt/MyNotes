@@ -7,10 +7,10 @@ class Book{
     + Book(string title)
     + Book(string title, List<Chapter> chapters)
     --
-    + void PrintChapters()
-    - Chapter GetChapter(String title)
-    + void WriteLine(String text)
     + void Start()
+    + void PrintChapters()
+    + void WriteLine(String text)
+    - Chapter GetChapter(String title)
 }
 
 class Chapter{
@@ -25,6 +25,9 @@ class Chapter{
 
 Class Page{
     + string Content
+    --
+    + Page(string content)
+    --
     + void Read()
 }
 
