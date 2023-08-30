@@ -9,6 +9,13 @@ public class Book
         Chapters = new List<Chapter>();
     }
 
+    public Book(string title, List<Chapter> chapters)
+    {
+        Console.BackgroundColor = ConsoleColor.Black;
+        Title = title;
+        Chapters = chapters;
+    }
+
     public void PrintChapters()
     {
         //Print chapter titles
@@ -21,7 +28,7 @@ public class Book
         Console.ResetColor();
     }
 
-    public Chapter GetChapter(string title)
+    private Chapter GetChapter(string title)
     {
         foreach (Chapter chapter in Chapters)
         {

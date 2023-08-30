@@ -1,0 +1,34 @@
+@startuml
+
+class Book{
+    + String Title
+    + List<Chapter> Chapters
+    --
+    + Book(string title)
+    + Book(string title, List<Chapter> chapters)
+    --
+    + void PrintChapters()
+    - Chapter GetChapter(String title)
+    + void WriteLine(String text)
+    + void Start()
+}
+
+class Chapter{
+    + String Title
+    + List<Page> Pages
+    --
+    + Chapter(string title)
+    + Chapter(string title, List<Page> pages)
+    --
+    + void Read()
+}
+
+Class Page{
+    + string Content
+    + void Read()
+}
+
+Book "1" *-- "1..*" Chapter
+Chapter "1" *-- "1..*" Page
+
+@enduml
