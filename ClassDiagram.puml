@@ -1,5 +1,9 @@
 @startuml
 
+class Program{
+    
+}
+
 class Book{
     + String Title
     + List<Chapter> Chapters
@@ -9,7 +13,7 @@ class Book{
     --
     + void Start()
     + void PrintChapters()
-    + void WriteLine(String text)
+    + {static} void WriteLine(String text)
     - Chapter GetChapter(String title)
 }
 
@@ -31,7 +35,15 @@ Class Page{
     + void Read()
 }
 
+class MyNotes <<static>>{
+    + {static} string VariablesPageOne
+    + {static} string VariablesPageTwo
+}
+
 Book "1" *-- "1..*" Chapter
 Chapter "1" *-- "1..*" Page
+
+Program ..> Book
+Program ..> MyNotes
 
 @enduml
