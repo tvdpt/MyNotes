@@ -18,7 +18,7 @@ Chapter kapitel2= new Chapter("AI");
 kapitel2.Pages.Add(FirstPageAI);
 kapitel2.Pages.Add(SecondPageAI);
 
-Book MyBook = new Book ("DIn mors noter");
+Book MyBook = new Book ("Hint! Heck AI Side 2");
 MyBook.Chapters.Add(kapitel1);
 MyBook.Chapters.Add(kapitel2);
 MyBook.Start();
